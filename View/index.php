@@ -1,3 +1,7 @@
+<?php
+    include './Model/db_connect.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,5 +20,9 @@
             <li style="list-style-type: none;"><button><a>Apoio Chat</a></button></li><br>
         </ul>
     </div>
+    <?php
+        echo "A base de dados foi criada" . $dbConnect;        
+    ?>
+    
 </body>
 </html>
