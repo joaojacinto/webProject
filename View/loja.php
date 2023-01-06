@@ -1,3 +1,7 @@
+<?php
+    include "db_connect.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="index.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinceladas</title>
+    <title>Loja</title>
 </head>
 <body>
-
 
     <div class="wrapper">
         <div class="sidebar">
@@ -28,13 +31,12 @@
         <div class="main_content">
             <div class="header">Pinceladas</div>  
             <div class="info">
-              <div>Lorem ipsum dolor sit, am3et consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamu</div>
-              <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamu</div>
-              <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus </div>
+              <div></div>
+              <div></div>
+              <div></div>
           </div>
         </div>
     </div>
     
-
 </body>
 </html>

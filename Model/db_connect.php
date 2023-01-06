@@ -12,11 +12,6 @@ function estabelerConexao(){
     try {
         $dbConnect = new PDO("mysql:$dsn;charset=utf8mb4",$username, $password);
         echo "Connection Successful";
-        $sql = "SELECT * FROM photos";
-        $fotos = $dbConnect->query($sql);
-        foreach($fotos AS $foto){
-            echo $foto["photo_id"];
-        }
     }
     catch (\PDOException $e) {
         echo $e->getMessage();
