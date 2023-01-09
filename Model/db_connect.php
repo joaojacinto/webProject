@@ -10,7 +10,7 @@ function estabelerConexao(){
     $dsn = "mysql:host=$host;dbname=$databaseName";
     
     try {
-        $dbConnect = new PDO("mysql:$dsn;charset=utf8mb4",$username, $password);
+        $dbConnect = new PDO("$dsn;charset=utf8mb4",$username, $password);
         echo "Connection Successful";
     }
     catch (\PDOException $e) {
@@ -19,5 +19,7 @@ function estabelerConexao(){
 
     return $dbConnect;
 }
+
+estabelerConexao();
 
 ?>
