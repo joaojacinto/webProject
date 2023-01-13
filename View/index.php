@@ -34,6 +34,35 @@
           </div>
         </div>
     </div>
+
+    <?php
+        require '/xampp/htdocs/webProject/Model/db_connect.php';
+        $sql = "SELECT * FROM photos";
+        if ($result = mysqli_query($conn, $sql)) {
+            if (mysqli_num_rows($result) > 0) {
+                echo '<table border="1px">';
+                echo "<tr>";
+                echo "<th>Product Name</th>";
+                echo "<th>Price (INR)</th>";
+                echo "<th>Category</th>";
+                echo "<th>Image</th>";
+                echo "</tr>";
+                while ($row = mysqli_fetch_array($result)) {
+                    echo "<tr>";
+                    echo "<td>" . $row['id'] . "</td>";
+                    echo "<td>" . $row['photo_name'] . "</td>";
+                    echo "<td>" . "<img src=".$row['photo_file_name'].' width=500px height="500px">' . "</td>";
+                    echo "</tr>";
+                }
+                echo "</table>";
+                mysqli_free_result($result);
+            } else {
+                echo "No records found";
+            }
+        } else {
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+        }
+    ?>
     
 
 </body>
