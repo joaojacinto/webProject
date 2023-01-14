@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="index.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinceladas</title>
+    <title>Galeria</title>
 </head>
 <body>
-
 
     <div class="wrapper">
         <div class="sidebar">
@@ -26,7 +25,7 @@
           </div>
         </div>
         <div class="main_content">
-            <div class="header">Pinceladas</div>  
+            <div class="header">Pinturas a carvao</div>  
             <div class="info">
             <?php
                 include '/xampp/htdocs/webProject/Controller/connect.php';
@@ -56,11 +55,9 @@
                     echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
                 }
             ?>
-              <div>Lorem ipsum dolor sit, am3et consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamu</div>
-              <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamu</div>
-              <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus </div>
           </div>
         </div>
-    </div> 
+    </div>
+    
 </body>
 </html>
