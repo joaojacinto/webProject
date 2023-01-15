@@ -20,9 +20,9 @@
                 <li><a href="#"><i class="fas fa-project-diagram"></i>Contacto</a></li>
             </ul> 
             <div class="social_media">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/pinceladasAJ" target=_blank ><img src="C:\xampp\htdocs\webProject\View\icons\facebook.png"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/pinceladas.aj/" target=_blank ><img src="C:\xampp\htdocs\webProject\View\icons\instagram.png"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.pinterest.pt/alinejacinto134/" target=_blank ><img src="C:\xampp\htdocs\webProject\View\icons\pinterest.png"><i class="fab fa-facebook-f"></i></a>
           </div>
         </div>
         <div class="main_content">
@@ -35,10 +35,9 @@
                     if (mysqli_num_rows($result) > 0) {
                         echo '<table border="1px">';
                         echo "<tr>";
-                        echo "<th>Product Name</th>";
-                        echo "<th>Price (INR)</th>";
-                        echo "<th>Category</th>";
-                        echo "<th>Image</th>";
+                        echo "<th>Preco (EUR)</th>";
+                        echo "<th>Nome</th>";
+                        echo "<th>Imagem</th>";
                         echo "</tr>";
                         while ($row = mysqli_fetch_array($result)) {
                             echo "<tr>";
@@ -56,9 +55,6 @@
                     echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
                 }
             ?>
-              <div>Lorem ipsum dolor sit, am3et consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamu</div>
-              <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamu</div>
-              <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus </div>
           </div>
         </div>
     </div> 
