@@ -19,9 +19,9 @@
                 <li><a href="#"><i class="fas fa-project-diagram"></i>Contacto</a></li>
             </ul> 
             <div class="social_media">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/pinceladasAJ" target=_blank class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/pinceladas.aj/" target=_blank class="fa fa-instagram"></a>
+                <a href="https://www.pinterest.pt/alinejacinto134/" target=_blank class="fa fa-pinterest"></a>
           </div>
         </div>
         <div class="main_content">
