@@ -28,13 +28,8 @@
                 <div class="header">LOJA</div>  
                 <div class="info"></div>
                 <div class="info">
-<<<<<<< HEAD
                     <form action="/xampp/htdocs/webProject/Controller/upload.php" method="post" enctype="multipart/form-data">Select image to upload:
                       <input type="file" name="fileToUpload" id="fileToUpload">
-=======
-                    <form action="/Controller/upload.php" method="post" enctype="multipart/form-data">Select image to upload:
-                    <input type="file" name="fileToUpload" id="fileToUpload">
->>>>>>> 857660bcee6a78ec8c828a29664e0ef582b2867d
                     <input type="submit" value="Upload Image" name="submit">
                     </form>
                 </div>
