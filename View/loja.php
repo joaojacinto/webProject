@@ -28,7 +28,7 @@
                 <div class="header">LOJA</div>  
                 <div class="info"></div>
                 <div class="info">
-                    <form action="/xampp/htdocs/webProject/Controller/upload.php" method="post" enctype="multipart/form-data">Select image to upload:
+                    <form action="/webProject/Controller/upload.php" method="post" enctype="multipart/form-data">Select image to upload:
                       <input type="file" name="fileToUpload" id="fileToUpload">
                     <input type="submit" value="Upload Image" name="submit">
                     </form>
