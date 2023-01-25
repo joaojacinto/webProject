@@ -91,24 +91,18 @@ body{
   border-bottom: 1px solid #e0e4e8;
 }
 
-.wrapper .main_content .header2{
-  padding: 20px;
-  background: #fff;
-  color: #717171;
-  border-bottom: 1px solid #e0e4e8;
-  z-index: 2;
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.wrapper .main_content .info{
-  margin: 20px;
-  color: #717171;
-  line-height: 25px;
+.gallery img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  margin: 10px;
 }
-
-.wrapper .main_content .info div{
-  margin-bottom: 20px;
-}
-
 
 /* SOCIAL MEDIA DESIGN */
 .fa {

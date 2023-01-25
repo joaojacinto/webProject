@@ -16,7 +16,7 @@
                     <li><a href="index.php"><i class="fas fa-home"></i>Home</a></li>
                     <li><a href="loja.php"><i class="fas fa-user"></i>Loja</a></li>
                     <li><a href="galeria.php"><i class="fas fa-address-card"></i>Galeria</a></li>
-                    <li><a href="#"><i class="fas fa-project-diagram"></i>Contacto</a></li>
+                    <li><a href="contacto.php"><i class="fas fa-project-diagram"></i>Contacto</a></li>
                 </ul> 
                 <div class="social_media">
                     <a href="https://www.facebook.com/pinceladasAJ" target=_blank class="fa fa-facebook"></a>
@@ -25,7 +25,7 @@
             </div>
             </div>
             <div class="main_content">
-                <div class="header">LOJA</div>  
+                <h1 class="header">LOJA</h1>  
                 <div class="info"></div>
                 <div class="info">
                     <form action="/webProject/Controller/upload.php" method="post" enctype="multipart/form-data">Select image to upload:
