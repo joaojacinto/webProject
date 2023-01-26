@@ -1,3 +1,31 @@
+<?php
+    error_reporting(0);
+    $msg = "";
+    
+    // If upload button is clicked ...
+    if (isset($_POST['upload'])) {
+        include '/xampp/htdocs/webProject/Model/db_connect.php';
+    
+        $filename = $_FILES["fileToUpload"]["name"];
+        $tempname = $_FILES["fileToUpload"]["tmp_name"];
+        $nomeEncomenda = $_REQUEST['nomeEncomenda'];
+        $folder = "./encomendasImagens/" . $nomeEncomenda. " - " . $filename;
+    
+        // Get all the submitted data from the form
+        $sql = "INSERT INTO encomendas (nome_encomenda, file_name) VALUES ('$nomeEncomenda','$filename')";
+        
+        // Execute query
+        mysqli_query($conn, $sql);
+    
+        // Now let's move the uploaded image into the folder: encomendasImagens
+        if (move_uploaded_file($tempname, $folder)) {
+            echo "<h3>  Image uploaded successfully!</h3>";
+        } else {
+            echo "<h3>  Failed to upload image!</h3>";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,13 +54,22 @@
             </div>
             <div class="main_content">
                 <h1 class="header">LOJA</h1>  
-                <div class="info"></div>
-                <div class="info">
-                    <form action="/webProject/Controller/upload.php" method="post" enctype="multipart/form-data">Select image to upload:
-                      <input type="file" name="fileToUpload" id="fileToUpload">
-                    <input type="submit" value="Upload Image" name="submit">
-                    </form>
-                </div>
+                <form class="formLoja" action="" method="post" enctype="multipart/form-data">
+                    Selecione a imagem para upload:
+                    <br><br><input type="file" id="fileToUpload" name="fileToUpload" id="fileToUpload">
+                    <br><br>Atribua um nome para a sua encomenda: <input type="text" id="nomeEncomenda" name="nomeEncomenda">
+                    <br><br><button type="submit" value="Upload Image" name="upload">Submeter Encomenda</button>
+                </form>
+                <?php
+                    $query = " select * from encomendas ";
+                    $result = mysqli_query($conn, $query);
+             
+                    while ($data = mysqli_fetch_assoc($result)) {
+                ?>
+                    <img src="./encomendasImagens/<?php echo $data['file_name']; ?>">
+                <?php
+                    }
+                ?>
             </div>
         </div> 
     

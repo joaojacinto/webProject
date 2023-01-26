@@ -1,3 +1,9 @@
+<?php
+    if(isset($_GET['Message'])){
+        print $_GET['Message'];
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,8 +32,20 @@
           </div>
         </div>
         <div class="main_content">
-            <h1 class="header">Contacto</h1>  
+            <h1 class="header">Contacto</h1>
+            <form action="/webProject/Controller/db_contacto.php" method="post" class="formContacto">
+                <label for="fname">Primeiro Nome:</label><br>
+                    <input type="text" id="primeiro" name="primeiro"><br><br>
+                <label for="apelido">Apelido:</label><br>
+                    <input type="text" id="apelido" name="apelido"><br><br>
+                <label for="email">Email:</label><br>
+                    <input type="text" id="email" name="email"><br><br>
+                <label for="assunto">Assunto:</label><br>
+                    <textarea pid="assunto" name="assunto" rows="5" cols="40" spellcheck="false"></textarea><br>
+                <input type="submit" value="Submeter">
+            </form> 
         </div>
+
     </div> 
 </body>
 </html>
