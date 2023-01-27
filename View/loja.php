@@ -11,7 +11,7 @@
         $tamanho = $_REQUEST['tamanho'];
         $folder = "./encomendasImagens/" . $nomeEncomenda. " - " .$tamanho . " - " . $filename;
     
-        $sql = "INSERT INTO encomendas (nome_encomenda, file_name) VALUES ('$nomeEncomenda','$tamanho', '$filename')";
+        $sql = "INSERT INTO encomendas (nome_encomenda, tamanho, file_name) VALUES ('$nomeEncomenda','$tamanho', '$filename')";
         
         mysqli_query($conn, $sql);
     
