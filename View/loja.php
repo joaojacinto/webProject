@@ -2,22 +2,19 @@
     error_reporting(0);
     $msg = "";
     
-    // If upload button is clicked ...
     if (isset($_POST['upload'])) {
         include '/xampp/htdocs/webProject/Model/db_connect.php';
     
         $filename = $_FILES["fileToUpload"]["name"];
         $tempname = $_FILES["fileToUpload"]["tmp_name"];
         $nomeEncomenda = $_REQUEST['nomeEncomenda'];
-        $folder = "./encomendasImagens/" . $nomeEncomenda. " - " . $filename;
+        $tamanho = $_REQUEST['tamanho'];
+        $folder = "./encomendasImagens/" . $nomeEncomenda. " - " .$tamanho . " - " . $filename;
     
-        // Get all the submitted data from the form
-        $sql = "INSERT INTO encomendas (nome_encomenda, file_name) VALUES ('$nomeEncomenda','$filename')";
+        $sql = "INSERT INTO encomendas (nome_encomenda, file_name) VALUES ('$nomeEncomenda','$tamanho', '$filename')";
         
-        // Execute query
         mysqli_query($conn, $sql);
     
-        // Now let's move the uploaded image into the folder: encomendasImagens
         if (move_uploaded_file($tempname, $folder)) {
             echo "<h3>  Image uploaded successfully!</h3>";
         } else {
@@ -56,9 +53,15 @@
                 <h1 class="header">LOJA</h1>  
                 <form class="formLoja" action="" method="post" enctype="multipart/form-data">
                     Selecione a imagem para upload:
-                    <br><br><input type="file" id="fileToUpload" name="fileToUpload" id="fileToUpload">
+                    <br><br><input type="file" id="fileToUpload" name="fileToUpload">
                     <br><br>Atribua um nome para a sua encomenda: <input type="text" id="nomeEncomenda" name="nomeEncomenda">
-                    <br><br><button type="submit" value="Upload Image" name="upload">Submeter Encomenda</button>
+                    <br><br>Escolha um tamanho: 
+                    <select id="types" name="tamanho">
+                        <option value="a4">A4</option>
+                        <option value="a3">A3</option>
+                        <option value="a2">A2</option>
+                    </select>
+                    <br><br><button type="submit" value="Upload Image" id="uploadbtn" name="upload">Submeter Encomenda</button>
                 </form>
                 <?php
                     $query = " select * from encomendas ";

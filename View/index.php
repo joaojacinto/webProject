@@ -26,7 +26,11 @@
           </div>
         </div>
         <div class="main_content">
-            <h1 class="header">Pinceladas</h1>  
+            <h1 class="header">Pinceladas</h1>
+            <h2 class="present" style="color:white">Bem-vindo ao meu site "Pinceladas e rabiscos... Dar asas à Imaginação!"</h2><br>  
+            <p style="color:white">Arte digital, retratos a carvão por encomenda, quadros em tinta acrilica,…..</p><br>
+            <p style="color:white">Este espaço serve para mostrar os meus trabalhos. E também para oferecer os meus serviços a quem estiver interessado em obter arte original ou retratos a carvão para oferecer.</p>
+
         </div>
     </div> 
 </body>
